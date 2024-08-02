@@ -61,7 +61,7 @@ runs:
       fi
 
   - if: steps.repo.outputs.ref-exists == 'true'
-    uses: actions/checkout@v3
+    uses: actions/checkout@v4
     with:
       fetch-depth: ${{ inputs.fetch-depth }}
       path: ${{ inputs.path }}
@@ -70,7 +70,7 @@ runs:
       token: ${{ inputs.token }}
 
   - if: steps.repo.outputs.ref-exists == 'false'
-    uses: actions/checkout@v3
+    uses: actions/checkout@v4
     with:
       fetch-depth: ${{ inputs.fetch-depth }}
       path: ${{ inputs.path }}
